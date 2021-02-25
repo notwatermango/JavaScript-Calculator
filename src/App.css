@@ -1,38 +1,176 @@
-.App {
+html{
+  font-size: 24px;
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px;
+  height: 100vh;
+  background: linear-gradient(58deg, rgba(127,111,133,1) 0%, rgba(72,84,122,1) 57%, rgba(3,49,107,1) 100%);  ;
+  
+  
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-height: 550px) {
+  html { font-size: 20px;}
+}
+
+@media (max-height: 473px) {
+  html { font-size: 15px}
+}
+
+@media (max-width: 550px) {
+  html { font-size: 20px; }
+}
+
+@media (max-width: 550px) and (max-height: 473px) {
+  html { font-size: 15px; }
+}
+
+#App{
+  position: relative;
+}
+
+
+#Calc{
+  display: flex;
+  width: 18rem;
+  flex-direction: column;
+  background-color: #16325A;
+  margin: auto;
+}
+
+#topContainer{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: right;
+}
+
+#display{
+  background-color: #18181a4d;
+  color: #DBBFB2;
+  width: auto;
+  padding: 0 1rem;
+  line-height: 3.75rem;
+  font-size: 2rem;
+  margin: 0;
+  height: 3.75rem;
+  overflow: scroll;
+}
+
+#displayTop{
+  background-color: indigo;
+  width: auto;
+  margin: 0 1rem;
+  padding: 0 0.3rem;
+  height: 1.7rem;
+  color: white;
+  line-height: 1.7rem;
+  overflow: scroll;
+
+}
+
+.clickables{
+  margin: 5px;
+  padding: 0px;
+  background-color: #DBBFB2;
+  padding: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#equals.clicked{
+  background-color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.clickables:active{
+  background-color: red
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#clickablesContainer{
+  display: grid;
+  grid-template-columns: 3.75rem 3.75rem 3.75rem 3.75rem;
+  grid-template-rows: 3.75rem 3.75rem 3.75rem 3.75rem 3.75rem ;
+  margin: auto
+}
+
+#divide{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#multiply{
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#subtract{
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#add{
+  grid-column: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  align-self: stretch;
+
+}
+
+#zero{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 5;
+  align-self: stretch;
+}
+
+#one, #two, #three{
+  grid-row: 4;
+}
+
+#four, #five, #six{
+  grid-row: 3;
+}
+
+#seven, #eight, #nine{
+  grid-row: 2;
+}
+
+#equals{
+  grid-column: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  align-self: stretch;
+}
+
+#sementara{
   color: white;
+  font-size: 0.5em;
+  text-align: center;
+  line-height: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#displayZ{
+  font-size: 0%;
+  line-height: 0%;
 }
